@@ -25,9 +25,8 @@ public class Password2 {
 			} else if (pass.substring(i, i + 1).matches("[A-Z]*")) {
 
 				mayus++;
-			} else if (pass.substring(i, i + 1).equals(".") || pass.substring(i, i + 1).equals("_")
-					|| pass.substring(i, i + 1).equals("*") || pass.substring(i, i + 1).equals("ñ")
-					|| pass.substring(i, i + 1).equals("Ñ")) {
+				
+			} else if (!pass.substring(i, i + 1).matches("[a-z]*") && pass.substring(i, i + 1).matches("[A-Z]*") && pass.substring(i, i + 1).matches("[0-9]*")) {
 
 				carac++;
 			}
